@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disney Princess Magic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header id="top">
+    Disney Princess Magic ✨
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#graph">Popularity Graph</a>
+    <a href="#quiz">Find Your Princess</a>
+  </nav>
+    <p>If you'd like to see my professional résumé, please click 
+        <a href="index.html">here</a> !
+    </p>
+    <p>If you want to play a princess themed snake game, click 
+        <a href="snakegame.html">here</a>!
+    </p>
+
+  <div class="container" id="about">
+    <h2>About the Princesses</h2>
+    <p>From Cinderella's slipper to Moana's ocean voyage, Disney Princesses have inspired generations with courage, kindness, and a touch of magic. This page celebrates their timeless charm!</p>
+  </div>
+
+
+  
+  <div class="container" id="graph">
+    <h2>Popularity of Disney Princesses Over Time</h2>
+       
+        <div class='tableauPlaceholder' id='viz1744652369336' style='position: relative'><noscript><a href='#'><img alt='British Blossoms ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;As&#47;AspringfullofBritishBlossoms&#47;BritishBlossoms&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AspringfullofBritishBlossoms&#47;BritishBlossoms' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;As&#47;AspringfullofBritishBlossoms&#47;BritishBlossoms&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1744652369336');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='2327px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+    <p style="font-size: 0.9rem; color: gray;">*Data sourced from public Tableau dashboards and search trends.</p>
+  </div>
+
+  <h2>Princess Aurora and Prince Phillip:</h2>
+  <img src="Aurora.jpg" 
+       alt="Princess Aurora" 
+       width="200" 
+       style="border-radius: 8px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);">
+
+
+  <div class="container quiz" id="quiz">
+    <h2>Which Disney Princess Are You?</h2>
+    <p>Answer the question below and find your royal match!</p>
+    <label>Pick a favorite quality:</label><br>
+    <select id="trait">
+      <option value="brave">Bravery</option>
+      <option value="kind">Kindness</option>
+      <option value="curious">Curiosity</option>
+      <option value="independent">Independence</option>
+    </select><br>
+    <button onclick="getPrincess()">Reveal My Princess!</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <h2>Almost There:</h2>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/RYAnclR8O3Q?si=oVS2soXUE5TDPz9H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+  <ol>
+    <li>Favorite Princesses!</li>
+    <ul>
+        <li> Aurora</li>
+        <li> Snow White</li>
+        <li> Rapunzel</li>
+    </ul>
+    <li>The Most Powerful princesses!
+      <ul>
+        <li>Mulan</li>
+        <li>Moana</li>
+        <li>Elsa</li>
+      </ul>
+
+  </ol>
+  <a href="#top">Back to top!</a>
+  <script>
+    function getPrincess() {
+      const trait = document.getElementById("trait").value;
+      let princess = "";
+      switch(trait) {
+        case "brave":
+          princess = "Merida";
+          break;
+        case "kind":
+          princess = "Cinderella";
+          break;
+        case "curious":
+          princess = "Ariel";
+          break;
+        case "independent":
+          princess = "Moana";
+          break;
+      }
+      document.getElementById("result").innerText = `You are most like ${princess}! 👑`;
+    }
+   
+  </script>
+</body>
+</html>
